@@ -3,9 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Odin Form Validation</title>
 </head>
 <body>
-    <h1>test</h1>
+    <form novalidate>
+        <div>
+            <label for="email">Email</label>
+            <input id="email" type="email">
+            <span></span>
+        </div>
+        <div>
+            <label for="country">Country</label>
+            <input id="country">
+            <span></span>
+        </div>
+        <div>
+            <label for="postal">Postal Code</label>
+            <input id="postal">
+            <span></span>
+        </div>
+        <div>
+            <label for="pwd">Password</label>
+            <input id="pwd">
+            <span></span>
+        </div>
+        <div>
+            <label for="pwd-confirm">Confirm Password</label>
+            <input id="pwd-confirm">
+            <span></span>
+        </div>
+        <button>Submit</button>
+    </form>
 </body>
 </html>

@@ -1,3 +1,7 @@
 import "./styles.css";
 
-console.log("Hello, this is a template");
+const btn = document.querySelector("button");
+
+btn.addEventListener("click", e => {
+    e.preventDefault();
+});
