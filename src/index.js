@@ -20,21 +20,30 @@ btn.addEventListener("click", (e) => {
   }
 });
 
-form.email.addEventListener("keyup", () => {
+form.email.addEventListener("input", () => {
   ReportValidation.email(form);
 });
 
-form.postal.addEventListener("keyup", () => {
-  ReportValidation.postal(form);
-  form.country.addEventListener("change", () => {
+form.country.addEventListener("input", () => {
+  if (!/^$/.test(form["postal"].value)) {
     ReportValidation.postal(form);
-  });
+  }
 });
 
-form.pwd.addEventListener("keyup", () => {
+form.postal.addEventListener("input", () => {
+  ReportValidation.postal(form);
+});
+
+form.pwd.addEventListener("input", () => {
   ReportValidation.pwd(form);
+  if (!/^$/.test(form["pwd-confirm"].value)) {
+    ReportValidation.pwdConfirm(form);
+  }
 });
 
-form["pwd-confirm"].addEventListener("keyup", () => {
+form["pwd-confirm"].addEventListener("input", () => {
   ReportValidation.pwdConfirm(form);
+  if (!/^$/.test(form["pwd"].value)) {
+    ReportValidation.pwdConfirm(form);
+  }
 });
