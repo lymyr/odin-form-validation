@@ -59,20 +59,32 @@ const ReportValidation = (() => {
     const email = (form) => {
         AddValidation.email(form)
         document.querySelector(`#email + span`).textContent = form.email.validationMessage
+        if (/^$/.test(form.email.validationMessage)) {
+            form.email.setAttribute("class", "valid")
+        }
     }
     const postal = (form) => {
         AddValidation.postal(form)
         document.querySelector(`#postal + span`).textContent = form.postal.validationMessage
+        if (/^$/.test(form.postal.validationMessage)) {
+            form.postal.setAttribute("class", "valid")
+        }
     }
 
     const pwd = (form) => {
         AddValidation.pwd(form)
         document.querySelector(`#pwd + span`).textContent = form.pwd.validationMessage
+        if (/^$/.test(form.pwd.validationMessage)) {
+            form.pwd.setAttribute("class", "valid")
+        }
     }
 
     const pwdConfirm = (form) => {
         AddValidation.pwdConfirm(form)
         document.querySelector(`#pwd-confirm + span`).textContent = form['pwd-confirm'].validationMessage
+        if (/^$/.test(form['pwd-confirm'].validationMessage)) {
+            form['pwd-confirm'].setAttribute("class", "valid")
+        }
     }
     return {email, postal, pwd, pwdConfirm}
 })()

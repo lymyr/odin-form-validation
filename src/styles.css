@@ -96,3 +96,13 @@ input + span {
 select {
   height: 36px;
 }
+
+input.valid {
+  /* outline: 1px solid rgb(169, 220, 169); */
+  background-color: rgb(225, 255, 225);
+}
+
+label:has(+ input.valid)::after {
+  content: " ✔";
+  color: green;
+}
