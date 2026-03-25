@@ -20,21 +20,21 @@ btn.addEventListener("click", (e) => {
   }
 });
 
-form.email.addEventListener("blur", () => {
+form.email.addEventListener("keyup", () => {
   ReportValidation.email(form);
 });
 
-form.postal.addEventListener("blur", () => {
+form.postal.addEventListener("keyup", () => {
   ReportValidation.postal(form);
   form.country.addEventListener("change", () => {
     ReportValidation.postal(form);
   });
 });
 
-form.pwd.addEventListener("blur", () => {
+form.pwd.addEventListener("keyup", () => {
   ReportValidation.pwd(form);
 });
 
-form["pwd-confirm"].addEventListener("blur", () => {
+form["pwd-confirm"].addEventListener("keyup", () => {
   ReportValidation.pwdConfirm(form);
 });
