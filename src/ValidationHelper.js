@@ -60,6 +60,8 @@ const ReportValidation = (() => {
       form.email.validationMessage;
     if (/^$/.test(form.email.validationMessage)) {
       form.email.setAttribute("class", "valid");
+    } else {
+      form.email.setAttribute("class", "");
     }
   };
   const postal = (form) => {
@@ -68,6 +70,8 @@ const ReportValidation = (() => {
       form.postal.validationMessage;
     if (/^$/.test(form.postal.validationMessage)) {
       form.postal.setAttribute("class", "valid");
+    } else {
+      form.postal.setAttribute("class", "");
     }
   };
 
@@ -77,6 +81,8 @@ const ReportValidation = (() => {
       form.pwd.validationMessage;
     if (/^$/.test(form.pwd.validationMessage)) {
       form.pwd.setAttribute("class", "valid");
+    } else {
+      form.pwd.setAttribute("class", "");
     }
   };
 
@@ -86,6 +92,8 @@ const ReportValidation = (() => {
       form["pwd-confirm"].validationMessage;
     if (/^$/.test(form["pwd-confirm"].validationMessage)) {
       form["pwd-confirm"].setAttribute("class", "valid");
+    } else {
+      form["pwd-confirm"].setAttribute("class", "");
     }
   };
   return { email, postal, pwd, pwdConfirm };

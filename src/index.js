@@ -26,6 +26,9 @@ form.email.addEventListener("blur", () => {
 
 form.postal.addEventListener("blur", () => {
   ReportValidation.postal(form);
+  form.country.addEventListener("change", () => {
+    ReportValidation.postal(form);
+  });
 });
 
 form.pwd.addEventListener("blur", () => {
