@@ -44,8 +44,8 @@ form {
   padding: 56px;
   box-shadow: 4px 2px 12px rgb(192, 192, 192);
     margin: auto;
-    margin-top: 10vh;
-    width: fit-content;
+    margin-top: 8vh;
+    width: 400px;
     display:flex;
     flex-direction: column;
     gap: 16px;
@@ -66,4 +66,33 @@ form button {
   width: fit-content;
   margin-left: auto;
   padding: 2px 12px;
+}
+
+body > div {
+  display: flex;
+  flex-wrap: wrap;
+  width: 400px;
+  gap: 4px;
+}
+
+body > div p {
+  border-radius: 8px;
+  background-color: rgb(235, 235, 235);
+  font-size: 14px;
+}
+
+input, select {
+  padding: 4px 6px;
+}
+
+input:invalid {
+  outline: 1px solid red;
+}
+
+input + span {
+  color:rgb(255, 0, 0);
+}
+
+select {
+  height: 36px;
 }

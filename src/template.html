@@ -9,12 +9,16 @@
     <form novalidate>
         <div>
             <label for="email">Email</label>
-            <input id="email" type="email">
+            <input id="email">
             <span></span>
         </div>
         <div>
             <label for="country">Country</label>
-            <input id="country">
+            <select id="country">
+                <option value="ph">Philippines</option>
+                <option value="ch">Switzerland</option>
+                <option value="fr">France</option>
+            </select>
             <span></span>
         </div>
         <div>
@@ -24,12 +28,12 @@
         </div>
         <div>
             <label for="pwd">Password</label>
-            <input id="pwd">
+            <input id="pwd" type="password">
             <span></span>
         </div>
         <div>
             <label for="pwd-confirm">Confirm Password</label>
-            <input id="pwd-confirm">
+            <input id="pwd-confirm" type="password">
             <span></span>
         </div>
         <button>Submit</button>
